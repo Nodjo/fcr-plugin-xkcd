@@ -1,0 +1,29 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nodjo.plugin.xkcd"
+    android:installLocation="auto"
+    android:versionCode="3"
+    android:versionName="1.2" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:description="@string/author_name"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <service
+            android:name="nodjo.plugin.xkcd.Xkcd"
+            android:exported="true"
+            android:icon="@drawable/icon"
+            android:label="@string/comic_name" >
+            <intent-filter>
+                <action android:name="nodjo.fcr.plugin" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
